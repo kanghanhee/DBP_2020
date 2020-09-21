@@ -1,6 +1,6 @@
 <?php
-  $link = mysqli_connect('localhost:3307','root','20180962','dbp');
-  $query = "SELECT * FROM topic";
+  $link = mysqli_connect('localhost:3307','root','20180962','dbpp');
+  $query = "SELECT * FROM flower";
   $result = mysqli_query($link, $query);
   $list = '';
   while($row = mysqli_fetch_array($result)){
@@ -27,10 +27,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title> DATABASE </title>
+  <title> W02_P </title>
 </head>
 <body>
-  <h1><a href="index.php"> DATABASE </a></h1>
+  <h1><a href="index.php"> FLOWER </a></h1>
   <ol> <?= $list ?> </ol>
   <form action="process_create.php" method="post">
     <p><input type="text" name="title" placeholder="title"></p>

@@ -1,7 +1,7 @@
 <?php
-  $link = mysqli_connect("localhost:3307", "root", "20180962", "dbp");
+  $link = mysqli_connect("localhost:3307", "root", "20180962", "dbpp");
   $query = "
-    INSERT INTO topic
+    INSERT INTO flower
       (title, description, created)
       VALUES (
         '{$_POST['title']}',
