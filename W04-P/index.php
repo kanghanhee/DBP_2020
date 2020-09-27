@@ -49,7 +49,7 @@
 </head>
 <body>
   <h1><a href="index.php"> FLOWER </a></h1>
-  <a href="flowering.php">개화시기</a>
+  <a href="flowering.php">flowering time</a>
   <ol> <?= $list ?> </ol>
   <a href="create.php">추가하기</a>
   <?=$update_link?>
