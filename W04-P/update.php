@@ -1,10 +1,10 @@
 <?php
-  $link = mysqli_connect('localhost:3307','root','20180962','dbpp');
+  $link = mysqli_connect('localhost:3307', 'root', '20180962', 'dbpp');
   $query = "SELECT * FROM flower";
   $result = mysqli_query($link, $query);
   $list = '';
-  while($row = mysqli_fetch_array($result)){
-    $list = $list."<li><a href=\"index.php?id={$row['id']}\">{$row['title']}</a></li>";
+  while ($row = mysqli_fetch_array($result)) {
+      $list = $list."<li><a href=\"index.php?id={$row['id']}\">{$row['title']}</a></li>";
   }
 
   $article = array(
@@ -12,16 +12,16 @@
     'description' => 'The language of flower is...'
   );
 
-  if( isset($_GET['id']) ) {
-    $filtered_id = mysqli_real_escape_string($link, $_GET['id']);
-    $query = "SELECT * FROM flower WHERE id={$filtered_id}";
-    $result = mysqli_query($link, $query);
-    $row = mysqli_fetch_array($result);
-    $article = array(
+  if (isset($_GET['id'])) {
+      $filtered_id = mysqli_real_escape_string($link, $_GET['id']);
+      $query = "SELECT * FROM flower WHERE id={$filtered_id}";
+      $result = mysqli_query($link, $query);
+      $row = mysqli_fetch_array($result);
+      $article = array(
        'title' => $row['title'],
        'description' => $row['description']
      );
-   }
+  }
  ?>
 
 <!DOCTYPE html>
