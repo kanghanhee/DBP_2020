@@ -34,25 +34,25 @@
 
 <body>
     <h2><a href="index.php">직원 관리 시스템</a> | 직원 정보 조회</h2>
-    
+
     <form action="emp_select_process.php" method="POST">
-         <input type="text" name="emp_no" placeholder="emp_no">
-         <input type="submit" value="Search">
-    `
-    <table border="1">
-        <tr>
-            <!-- 가운데 정렬,진하게 자동으로 -->
-            <th>emp_no</th>
-            <th>birth_date</th>
-            <th>first_name</th>
-            <th>last_name</th>
-            <th>gender</th>
-            <th>hire_date</th>
-            <th>update</th>
-            <th>delete</th>
-        </tr>
-        <?=$emp_info?>
-    </table>
+        <input type="text" name="emp_no" placeholder="emp_no">
+        <input type="submit" value="Search">
+        `
+        <table border="1">
+            <tr>
+                <!-- 가운데 정렬,진하게 자동으로 -->
+                <th>emp_no</th>
+                <th>birth_date</th>
+                <th>first_name</th>
+                <th>last_name</th>
+                <th>gender</th>
+                <th>hire_date</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+            <?=$emp_info?>
+        </table>
 </body>
 
 </html>

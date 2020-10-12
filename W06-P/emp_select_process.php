@@ -1,25 +1,27 @@
 <?php
-    $link = mysqli_connect("localhost", "admin", "admin", "employees");
-    $query = "SELECT * FROM employees ORDER BY emp_no DESC LIMIT 30"; //뒤에서부터 10개만 출력
-    $result = mysqli_query($link, $query);
+    $link = mysqli_connect('localhost','admin','admin','employees');
+    $filtered_id = mysqli_real_escape_string($link,$_POST['emp_no']);
+
+    $query="SELECT * FROM employees WHERE emp_no= '{$filtered_id}'";
+
+    $result = mysqli_query($link,$query);
 
     $emp_info = '';
-    $row = mysqli_fetch_array($result);
+    $row=mysqli_fetch_array($result);
 
-        $emp_info .= '<tr>';
-        $emp_info .= '<td>'.$row['emp_no'].'</td>';
-        $emp_info .= '<td>'.$row['birth_date'].'</td>';
-        $emp_info .= '<td>'.$row['first_name'].'</td>';
-        $emp_info .= '<td>'.$row['last_name'].'</td>';
-        $emp_info .= '<td>'.$row['gender'].'</td>';
-        $emp_info .= '<td>'.$row['hire_date'].'</td>';
-        $emp_info .= '<td><a href="emp_update.php?emp_no='.$row['emp_no'].'">update</a></td>';
-        $emp_info .= '<td><a href="emp_delete.php?emp_no='.$row['emp_no'].'">delete</a></td>';
-        $emp_info .= '</tr>';
-
-
+    $emp_info .= '<tr>';
+    $emp_info .= '<td>' .$row['emp_no']. '</td>';
+    $emp_info .= '<td>' .$row['birth_date']. '</td>';
+    $emp_info .= '<td>' .$row['first_name']. '</td>';
+    $emp_info .= '<td>' .$row['last_name']. '</td>';
+    $emp_info .= '<td>' .$row['gender']. '</td>';
+    $emp_info .= '<td>' .$row['hire_date']. '</td>';
+    $emp_info .= '<td><a href="emp_update.php?emp_no=' .$row['emp_no']. '">update</a></td>';
+    $emp_info .= '<td><a href="emp_delete.php?emp_no=' .$row['emp_no']. '">delete</a></td>';
+    $emp_info .= '</tr>';
 
 
+    
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +34,7 @@
 
 <body>
     <h2><a href="index.php">직원 관리 시스템</a> | 직원 정보 조회</h2>
-    
+
     <table border="1">
         <tr>
             <!-- 가운데 정렬,진하게 자동으로 -->
@@ -47,7 +49,7 @@
         </tr>
         <?=$emp_info?>
     </table>
-    
+
     <a href="emp_select.php">돌아가기</a>
 </body>
 
