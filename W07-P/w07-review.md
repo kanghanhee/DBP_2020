@@ -2,22 +2,14 @@
 
 **새로배운내용**
 
-- OpenSSH : ssh프로토콜을 이용하여 암호화된 통신세션을 컴퓨터 네트워크에 제공하는 컴퓨터 프로그램   
-- openSSH 설치
+- CSS
 ```
-//ssh 설치
-- sudo apt install openssh-server
-
-//설치 후 systemctl로 상태 확인(active인지)
-- sudo systemctl status ssh
+body{ font-family: 12px}
+table { width:100% }
+tr,td { padding : 10px; border-bottom: 1px solid }
 
 ```
-- mariaDB
-```
-- mysql -uadmin -p //mysql 접속 u:사용자, -p:패스워드 입력
-
-- select * from employees limit 10; // 10개 데이터만 보여줌
-```
+- 데이터 출력 제한 : LIMIT ()
 
 **문제가 발생하거나 고민한 내용 + 해결과정**
     
