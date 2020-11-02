@@ -1,0 +1,97 @@
+:root {
+  --text-color: #f0f4f5;
+  --background-color: #263343;
+  --accent-color: #d49466;
+}
+
+.main {
+  padding-top: 130px;
+}
+
+.box {
+  margin-left: 100px;
+  width: 1300px;
+  height: 500px;
+  overflow-y: scroll;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+tr.title {
+  margin: -33px 0px 0px -1px;
+  width: 1300px;
+  display: table;
+  position: absolute;
+  background-color: var(--accent-color);
+}
+
+th,
+td {
+  text-align: start;
+  padding: 6px;
+  border-bottom: 1px solid #dadada;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+div#header {
+  background-color: var(--background-color);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+div#logo {
+  float: left;
+  width: 30%;
+  padding: 10px 0 0 20px;
+  font-size: 50px;
+  color: var(--text-color);
+}
+
+div#logo i {
+  color: var(--accent-color);
+}
+
+.navbar {
+  float: left;
+  list-style: none;
+  width: 40%;
+}
+
+.navbar li {
+  float: left;
+  font-size: 20px;
+}
+
+.navbar li:hover {
+  background-color: var(--accent-color);
+  border-radius: 4px;
+}
+
+.navbar a {
+  line-height: 40px;
+  color: var(--text-color);
+  padding: 0 15px;
+  text-decoration: none;
+}
+
+.navbar_icons {
+  display: flex;
+  float: left;
+  list-style: none;
+  width: 15%;
+  color: var(--text-color);
+}
+
+.navbar_icons li {
+  padding: 8px 12px;
+}
