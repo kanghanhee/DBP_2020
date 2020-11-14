@@ -47,11 +47,14 @@ insert into location values (3201, 'garosugil', '60000', 'Seoul', NULL, 'KR')
 https://m.blog.naver.com/PostView.nhn?blogId=chocohigh21&logNo=220729924806&proxyReferer=https:%2F%2Fwww.google.com%2F
 
 
-회고
-------
+학습회고
 (+): 오라클로 실습하니 새로워서 좋았다.
 
 (-): 이클립스에서 tab이 바로 실행되지 않아 불편하다.
 
-(!): 
+(!): 트랜잭션
+
+유튜브 링크
+https://youtu.be/MP8Dg6q3J2M
+
 
