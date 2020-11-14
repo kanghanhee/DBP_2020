@@ -1,6 +1,6 @@
 #11주차 학습회고
 
-<h2>새로 배운 내용
+새로 배운 내용
 -Transaction, Rollback, Commit
 ```
 -트랜잭션이란?
